@@ -6,18 +6,30 @@ public class CentroMedico {
     private List<Persona> pacientes = new ArrayList<Persona>();
     private final String nombre;
     private final String ubicacion;
+    private List <Consulta> consultas;
     public CentroMedico(String nombre, String ubicacion) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
     }
 
 
+
+    //region generic methods
     @Override
     public String toString() {
-        return nombre+" "+ubicacion+"."+"\nCantidad de pacientes: "+pacientes.size()+"\nCantidad de medicos: "+medicos.size();
+        return nombre+".\n"+ubicacion+"."+"\nCantidad de pacientes: "+pacientes.size()+"\nCantidad de medicos: "+medicos.size();
     }
 
     // getters y setter
+
+    public List<Consulta> getConsultas() {
+        return consultas;
+    }
+
+    public void setConsultas(List<Consulta> consultas) {
+        this.consultas = consultas;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -41,4 +53,5 @@ public class CentroMedico {
     public List<Persona> getPacientes() {
         return pacientes;
     }
+    //endregion
 }

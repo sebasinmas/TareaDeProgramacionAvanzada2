@@ -1,15 +1,31 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class CentroMedico {
-    private List<Persona> medicos = new List<Persona>();
-    private List<Persona> pacientes = new List<Persona>();
-
-    public CentroMedico(){
-
+    private List<Persona> medicos = new ArrayList<Persona>();
+    private List<Persona> pacientes = new ArrayList<Persona>();
+    private final String nombre;
+    private final String ubicacion;
+    public CentroMedico(String nombre, String ubicacion) {
+        this.nombre = nombre;
+        this.ubicacion = ubicacion;
     }
 
-    
-    // getters y setters
+
+    @Override
+    public String toString() {
+        return nombre+" "+ubicacion+"."+"\nCantidad de pacientes: "+pacientes.size()+"\nCantidad de medicos: "+medicos.size();
+    }
+
+    // getters y setter
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
     public void setMedicos(List<Persona> medicos) {
         this.medicos = medicos;
     }

@@ -30,7 +30,7 @@ public class CLI {
         Paciente paciente = new Paciente();
     }
     private void InfoOption(){
-        System.out.printf("Presione 0 para salir, 1 para agregar un Medico, 2 para agregar un paciente,\n3 para crear una cita medica");
+        System.out.printf("Presione 0 para salir, 1 para agregar un Medico, 2 para agregar un paciente, 3 para crear una cita medica\n");
     }
     private void CrearCitaMedica(){
 

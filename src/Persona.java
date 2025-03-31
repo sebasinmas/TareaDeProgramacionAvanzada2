@@ -10,10 +10,10 @@ public abstract class Persona {
     private static final Scanner scanner = new Scanner(System.in);
 
     public Persona() {
-        this.name = IngresarDato("Ingrese el nombre del paciente");
-        this.rut = ExisteRUT(IngresarDato("Ingrese el rut del paciente"));
+        this.name = IngresarDato("Ingrese el nombre");
+        this.rut = ExisteRUT(IngresarDato("Ingrese el rut"));
         ruts.add(this.rut);
-        this.numero = IngresarDato("Ingrese el numero del paciente");
+        this.numero = IngresarDato("Ingrese el numero");
     }
 
     public void setName(String name) {

@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Medico extends Persona{
+    private static List<Medico> medicos = new ArrayList<>();
     private String especialidad;
     private int añosExperiencia;
     private boolean disponibilidad;
@@ -8,9 +11,11 @@ public class Medico extends Persona{
 
     public Medico() {
         super();
+        medicos.add(this);
         this.especialidad = Persona.IngresarDato("Ingrese la especialidad");
         this.añosExperiencia = IngresarNumero("Ingrese los años de experiencia");
         this.disponibilidad = new Random().nextBoolean();
+        System.out.printf(toString());
     }
 
     public String getEspecialidad() {

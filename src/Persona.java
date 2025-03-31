@@ -3,16 +3,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class Persona {
-    List<String> ruts = new ArrayList<String>();
+    static List<String> ruts = new ArrayList<String>();
     private String name;
     private String rut;
     private String numero;
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public Persona() {
         this.name = IngresarDato("Ingrese el nombre del paciente");
-        String theRut = IngresarDato("Ingrese el rut del paciente");
-        this.rut = ExisteRUT(theRut);
+        this.rut = ExisteRUT(IngresarDato("Ingrese el rut del paciente"));
+        ruts.add(this.rut);
         this.numero = IngresarDato("Ingrese el numero del paciente");
     }
 
@@ -41,7 +41,8 @@ public abstract class Persona {
     }
     public String ExisteRUT(String rut){
         for(String therut : ruts){
-            if(therut.equals(rut)){
+            if(therut.equalsIgnoreCase(rut)){
+                System.out.println("El rut ingresado ya existe");
                 try {
                     throw new Exception();
                 } catch (Exception e) {

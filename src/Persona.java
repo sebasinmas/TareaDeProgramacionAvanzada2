@@ -2,6 +2,7 @@ public class Persona {
     List<String> ruts = new List<String>();
     private string name;
     private String rut;
+    hola;
     private String numero;
 
     public Persona(String name, String rut, String numero) {

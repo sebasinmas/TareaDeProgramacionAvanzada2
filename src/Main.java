@@ -1,7 +1,7 @@
 public class Main{
         public static void main(String[] args){
-            System.out.println("hola seba ciomo estas");
-        CLI cli = new CLI();
-        cli.Execute();
+            CentroMedico miraflores = new CentroMedico("Miraflores","Miraflores 9047");
+            CLI cli = new CLI(miraflores);
+            cli.Execute();
     }
 }

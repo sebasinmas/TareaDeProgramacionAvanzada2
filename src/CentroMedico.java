@@ -6,7 +6,7 @@ public class CentroMedico {
     private List<Persona> pacientes = new ArrayList<Persona>();
     private final String nombre;
     private final String ubicacion;
-    private List <Consulta> consultas;
+    private List <Consulta> consultas = new ArrayList<>();
     public CentroMedico(String nombre, String ubicacion) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
@@ -17,7 +17,7 @@ public class CentroMedico {
     //region generic methods
     @Override
     public String toString() {
-        return nombre+".\n"+ubicacion+"."+"\nCantidad de pacientes: "+pacientes.size()+"\nCantidad de medicos: "+medicos.size();
+        return "Nombre: "+nombre+".\n"+"Ubicación: "+ubicacion+"."+"\nCantidad de pacientes: "+pacientes.size()+"\nCantidad de medicos: "+medicos.size()+"\n"+"Consultas: "+consultas.size();
     }
 
     // getters y setter

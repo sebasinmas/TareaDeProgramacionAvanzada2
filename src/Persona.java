@@ -12,7 +12,6 @@ public abstract class Persona {
     public Persona() {
         this.name = IngresarDato("Ingrese el nombre");
         this.rut = ExisteRUT(IngresarDato("Ingrese el rut"));
-        ruts.add(this.rut);
         this.numero = IngresarDato("Ingrese el numero");
     }
 
